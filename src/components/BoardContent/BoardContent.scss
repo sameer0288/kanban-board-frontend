@@ -1,0 +1,71 @@
+@import '../../_settings';
+
+.board-columns {
+    display: flex;
+    margin: 0 $gap 5px 0;
+    gap: 10px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    &::-webkit-scrollbar {
+        -webkit-appearance: none;
+
+        &-horizontal {
+            height: 11px;
+        }
+
+        &-thumb {
+            background-color: rgba(113, 112, 112, 0.5);
+             border: 5px ;
+            border-radius: 50px;
+            background-clip: padding-box;
+        }
+    }
+        .column-drop-preview {
+            background-color: rgba(150, 150, 200, 0.1);
+            border: 1px dashed #abc;
+            margin: 5px 45px 5px 5px;
+        }
+
+        .add-new-column{
+            width:250px;
+            height: 40px;
+            line-height: 32px;
+            padding:4px 0 4px 15px;
+            color: white;
+            cursor: pointer;
+            margin-left:$gap;
+            font-size: 15px;
+            background-color: hsla(0,0,100,.24);
+            border-radius:$column-border-radius;
+
+            &:hover{
+                background-color: hsla(0,0,100,.34);
+            }
+        }
+
+        .content-add-column{
+            width: 250px;
+            height: fit-content;
+            padding: 5px;
+            margin-left: $gap;
+            background-color: hsla(0,0,100,.34);
+            border-radius: $column-border-radius;
+
+            .group-btn{
+                display: flex;
+                padding-top: 10px;
+                align-items: center;
+            }
+
+            .form-control{
+                width: unset !important;
+            }
+
+            i{
+                font-size: 30px;
+                padding-left: 10px;
+                cursor: pointer;
+              
+            }
+        }
+}
